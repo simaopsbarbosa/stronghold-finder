@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Stronghold Finder
+    </title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.cdnfonts.com/css/minecraft-4" rel="stylesheet">
+                
+</head>
+<body>
+    <div class="whole">
+    <div id="header">
+        <h1>Find your closest Stronghold</h1>
+        <p>you will need to throw two <a style="color: rgb(174, 103, 255)" href="https://minecraft.fandom.com/wiki/Eye_of_Ender">eyes of ender</a>.</p>
+        <p>when you throw the first one, make sure you get the direction it went and your coordinates.</p>   
+        <p>in another position throw the second one and also record the throw's direction and coordinates.</p>
+        <br>
+    </div>
+    <div id="inputs">
+        <div class="throws">
+            <h2>first throw:</h2>
+            <form>
+                <p>coordinates: </p>
+                <div id="input-coords-div">
+                    <p class="no-margin darker">x: <input id="x1" type="number"></p>
+                    <p class="no-margin darker">z: <input id="z1" type="number"></p>
+                </div>
+                <p>direction: <input id="angle1" type="number"></p>
+                <br>
+            </form>
+        </div>
+        <div class="throws">
+            <h2>second throw:</h2>
+            <form>
+                <p>coordinates: </p>
+                <div id="input-coords-div">
+                    <p class="no-margin darker">x: <input id="x2" type="number"></p>
+                    <p class="no-margin darker">z: <input id="z2" type="number"></p>
+                </div>
+                <p>direction: <input id="angle2" type="number"></p>
+                <br>
+            </form>
+        </div>
+        
+    </div>
+    <div id="submit-div">
+        <button id="submit-button">find Stronghold</button>
+    </div>
+    <div id="ans-box">
+            <p>Stronghold is approximately  at:</p>
+            <div id="ans-coord-div">
+                <p>x: </p><p id="xans" class="coords"></p>
+                <p>y: </p><p id="zans" class="coords"></p>
+            </div>
+            <p id="error">error!</p>
+    </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

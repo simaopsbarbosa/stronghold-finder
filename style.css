@@ -1,0 +1,151 @@
+html {
+    padding: 30px 10px;
+}
+
+::-moz-selection { 
+    color: rgb(34, 34, 34);
+    background: rgb(195, 143, 255);
+}
+
+::selection {
+    color: rgb(34, 34, 34);
+    background: rgb(195, 143, 255);
+}
+
+body {
+    background-image: url("https://e0.pxfuel.com/wallpapers/432/334/desktop-wallpaper-brick-stone-wall-realistic-faux-effect-textured-graphic-226744.jpg");
+    background-repeat: repeat;
+    background-size: 200px 200px;
+    font-family: "Minecraft";
+}
+
+.whole {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+#header {
+    padding: 20px 40px;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    color: white;
+    border-radius: 40px;
+    text-align: center;
+}
+
+#header > p {
+    margin: 2px;
+    color: rgb(173, 173, 173);
+    font-weight: 100;
+}
+
+#inputs {
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.throws {
+    padding: 20px 40px;
+    background-color: rgba(38, 19, 59, 0.6);
+    backdrop-filter: blur(5px);
+    color: white;
+    border-radius: 40px;
+    margin: 10px auto;
+    width: 40%;
+    min-width: 250px;
+    box-sizing: border-box;
+}
+
+#input-coords-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    font-family: "Minecraft";
+    padding: 5px;
+    margin: 2px;
+    border-radius: 8px;
+    font-size: 15px;
+    width: 100%;
+}
+
+input:focus, input::selection {
+    background-color: rgba(255, 255, 255, 0.3);
+    outline: none;
+}
+
+#submit-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    width: 100%;
+}
+
+#submit-button {
+    border: none;
+    padding: 20px 40px;
+    background-color: rgba(38, 19, 59, 0.6);
+    backdrop-filter: blur(5px);
+    color: white;
+    border-radius: 10px;
+    font-family: "Minecraft";
+    font-size: 30px;
+}
+
+#submit-button:hover {
+    background-color: rgba(25, 11, 41, 0.7);
+}
+
+#submit-button:active {
+    background-color: rgba(25, 11, 41, 0.8);
+}
+
+#ans-box {
+    font-size: 25px;
+    padding: 10px 50px;
+    background-color: rgba(38, 19, 59, 0.6);
+    backdrop-filter: blur(5px);
+    color: white;
+    border-radius: 40px;
+    margin: 50px auto;
+    width: 60%;
+    min-width: 250px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+#ans-coord-div {
+    padding: 10px 40px;
+    margin: 0 auto 30px;
+    color: rgb(173, 173, 173);
+    font-weight: 100;
+    font-size: 20px;
+    width: 40%;
+    background-color: rgba(38, 19, 59, 0.3);
+    border-radius: 20px;
+    text-align: center;
+}
+
+#error {
+    font-size: 18px;
+    color: rgb(202, 83, 83);
+    text-align: center; 
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
