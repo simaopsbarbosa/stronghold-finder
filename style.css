@@ -2,21 +2,50 @@ html {
     padding: 30px 10px;
 }
 
-::-moz-selection { 
-    color: rgb(34, 34, 34);
-    background: rgb(195, 143, 255);
-}
-
-::selection {
-    color: rgb(34, 34, 34);
-    background: rgb(195, 143, 255);
-}
-
 body {
     background-image: url("https://e0.pxfuel.com/wallpapers/432/334/desktop-wallpaper-brick-stone-wall-realistic-faux-effect-textured-graphic-226744.jpg");
     background-repeat: repeat;
     background-size: 200px 200px;
     font-family: "Minecraft";
+}
+
+input {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    font-family: "Minecraft";
+    padding: 5px;
+    margin: 2px;
+    border-radius: 8px;
+    font-size: 15px;
+    width: 100%;
+}
+
+input:focus, input::selection {
+    background-color: rgba(255, 255, 255, 0.3);
+    outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+.throws {
+    padding: 20px 40px;
+    background-color: rgba(38, 19, 59, 0.6);
+    backdrop-filter: blur(5px);
+    color: white;
+    border-radius: 40px;
+    margin: 10px auto;
+    width: 40%;
+    min-width: 250px;
+    box-sizing: border-box;
 }
 
 .whole {
@@ -47,17 +76,6 @@ body {
     flex-wrap: wrap;
 }
 
-.throws {
-    padding: 20px 40px;
-    background-color: rgba(38, 19, 59, 0.6);
-    backdrop-filter: blur(5px);
-    color: white;
-    border-radius: 40px;
-    margin: 10px auto;
-    width: 40%;
-    min-width: 250px;
-    box-sizing: border-box;
-}
 
 #input-coords-div {
     display: flex;
@@ -65,22 +83,6 @@ body {
     align-items: center;
 }
 
-input {
-    background-color: rgba(255, 255, 255, 0.1);
-    border: none;
-    color: white;
-    font-family: "Minecraft";
-    padding: 5px;
-    margin: 2px;
-    border-radius: 8px;
-    font-size: 15px;
-    width: 100%;
-}
-
-input:focus, input::selection {
-    background-color: rgba(255, 255, 255, 0.3);
-    outline: none;
-}
 
 #submit-div {
     display: flex;
@@ -140,12 +142,13 @@ input:focus, input::selection {
     color: rgb(202, 83, 83);
     text-align: center; 
 }
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
+
+::-moz-selection { 
+    color: rgb(34, 34, 34);
+    background: rgb(195, 143, 255);
 }
 
-input[type=number] {
-    -moz-appearance: textfield;
+::selection {
+    color: rgb(34, 34, 34);
+    background: rgb(195, 143, 255);
 }
