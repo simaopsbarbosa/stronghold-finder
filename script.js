@@ -28,18 +28,37 @@ function getStronghold_Z(x, x1, z1, angle1) {
 
 submitButton.onclick = function () {
     errorMessage.style.display = "none";
+     
+    const regex = /tp @s (-?\d+\.\d+) \d+\.\d+ (-?\d+\.\d+) (-?\d+\.\d+)/; // thanks chatgpt <3
     
-    // atualizar coordenadas e converter para números
-    throw1 = {
-        x: parseFloat(document.getElementById("x1").value),
-        z: parseFloat(document.getElementById("z1").value),
-        angle: parseFloat(document.getElementById("angle1").value)
+    const location1 = document.getElementById("throw1").value;
+    const matches1 = location1.match(regex);
+    
+    if (matches1) {
+        throw1 = {
+            x: parseFloat(matches1[1]),
+            z: parseFloat(matches1[2]),
+            angle: parseFloat(matches1[3])
+        }
+    } else {
+        errorMessage.style.display = "block";
+        errorMessage.innerHTML = "error : make sure none of the fields are left empty"
+        return 0; 
     }
     
-    throw2 = {
-        x: parseFloat(document.getElementById("x2").value),
-        z: parseFloat(document.getElementById("z2").value),
-        angle: parseFloat(document.getElementById("angle2").value)
+    const location2 = document.getElementById("throw2").value;
+    const matches2 = location2.match(regex);
+
+    if (matches2) {
+        throw2 = {
+            x: parseFloat(matches2[1]),
+            z: parseFloat(matches2[2]),
+            angle: parseFloat(matches2[3])
+        } 
+    } else {
+        errorMessage.style.display = "block";
+        errorMessage.innerHTML = "error : make sure none of the fields are left empty"
+        return 0; 
     }
 
     // verificar se está algum field vazio
