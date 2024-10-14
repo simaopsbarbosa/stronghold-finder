@@ -66,11 +66,10 @@ submitButton.onclick = function () {
     }
 
     // calcular as coordenadas
-    const res_X = getStronghold_X(throw1.x, throw1.z, throw1.angle, throw2.x, throw2.z, throw2.angle);
-    const res_Z = getStronghold_Z(res_X, throw1.x, throw1.z, throw1.angle);
+    const res_X = getStronghold_X(throw1.x, throw1.z, throw1.angle - 90, throw2.x, throw2.z, throw2.angle - 90);
+    const res_Z = getStronghold_Z(res_X, throw1.x, throw1.z, throw1.angle - 90);
 
     // exibir o resultado
     ansX.innerHTML = res_X.toFixed(1).toString();
     ansZ.innerHTML = res_Z.toFixed(1).toString();
 }
-
