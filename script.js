@@ -1,68 +1,76 @@
-var throw1 = {
-    x: document.getElementById("x1").value,
-    z: document.getElementById("z1").value,
-    angle: document.getElementById("angle1").value
-}
-
-var throw2 = {
-    x: document.getElementById("x2").value,
-    z: document.getElementById("z2").value,
-    angle: document.getElementById("angle2").value
-}
-
 var errorMessage = document.getElementById("error")
 var submitButton = document.getElementById("submit-button")
 var ansX = document.getElementById("xans")
 var ansZ = document.getElementById("zans")
-
 errorMessage.style.display = "none";
+
+function deg2rad(degrees) {
+  return degrees * (Math.PI / 180);
+}
+
+function getStronghold_X(x1, z1, angle1, x2, z2, angle2) {
+    const r1 = Math.tan(deg2rad(angle1));
+    const r2 = Math.tan(deg2rad(angle2));
+    
+    const c1 = z1 - r1 * x1;
+    const c2 = z2 - r2 * x2;
+
+    return (c2 - c1) / (r1 - r2);
+}
+
+function getStronghold_Z(x, x1, z1, angle1) {
+    const r = Math.tan(deg2rad(angle1));
+    return r * (x - x1) + z1;
+}
 
 submitButton.onclick = function () {
     errorMessage.style.display = "none";
-    // atualizar coordenadas
+    
+    // atualizar coordenadas e converter para números
     throw1 = {
-        x: document.getElementById("x1").value,
-        z: document.getElementById("z1").value,
-        angle: document.getElementById("angle1").value
+        x: parseFloat(document.getElementById("x1").value),
+        z: parseFloat(document.getElementById("z1").value),
+        angle: parseFloat(document.getElementById("angle1").value)
     }
     
     throw2 = {
-        x: document.getElementById("x2").value,
-        z: document.getElementById("z2").value,
-        angle: document.getElementById("angle2").value
+        x: parseFloat(document.getElementById("x2").value),
+        z: parseFloat(document.getElementById("z2").value),
+        angle: parseFloat(document.getElementById("angle2").value)
     }
 
     // verificar se está algum field vazio
-    if (throw1.x == "" || throw1.z == "" || throw1.angle == "") {
+    if (isNaN(throw1.x) || isNaN(throw1.z) || isNaN(throw1.angle)) {
         errorMessage.style.display = "block";
         errorMessage.innerHTML = "error : make sure none of the fields are left empty"
+        return 0; 
     }
-    if (throw2.x == "" || throw2.z == "" || throw2.angle == "") {
+    if (isNaN(throw2.x) || isNaN(throw2.z) || isNaN(throw2.angle)) {
         errorMessage.style.display = "block";
         errorMessage.innerHTML = "error : make sure none of the fields are left empty"
-    }2
-
+        return 0; 
+    }
     
-    // verificar angulos invalidos
+    // verificar ângulos inválidos
     if (-180 > throw1.angle || throw1.angle > 180) {
         errorMessage.style.display = "block";
         errorMessage.innerHTML = "error : invalid angle (on first throw)"
         console.log("invalid angle")
+        return 0; 
     }
     if (-180 > throw2.angle || throw2.angle > 180) {
         errorMessage.style.display = "block";
         errorMessage.innerHTML = "error : invalid angle (on second throw)"
         console.log("invalid angle")
+        return 0; 
     }
-    
 
-    // angulo "certo" seria  360 - (document.getElementById("angle2").value + 90)
-    console.log(document.getElementById("angle1").value , angle)
-    
+    // calcular as coordenadas
+    const res_X = getStronghold_X(throw1.x, throw1.z, throw1.angle, throw2.x, throw2.z, throw2.angle);
+    const res_Z = getStronghold_Z(res_X, throw1.x, throw1.z, throw1.angle);
+
+    // exibir o resultado
+    ansX.innerHTML = res_X.toFixed(1).toString();
+    ansZ.innerHTML = res_Z.toFixed(1).toString();
 }
 
-function calcX(x,y, angle) {
-    // get eq b
-    var b = y - (x/angle)
-
-}
