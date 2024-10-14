@@ -16,33 +16,23 @@
             <h1>Find your closest Stronghold</h1>
             <p class="small-text">you will need to throw two <a style="color: rgb(174, 103, 255)"
                     href="https://minecraft.fandom.com/wiki/Eye_of_Ender">eyes of ender</a>.</p>
-            <p class="small-text">when you throw the first one, make sure you get the direction it went and your coordinates.</p>
-            <p class="small-text">in another position throw the second one and also record the throw's direction and coordinates.</p>
-            <p class="small-text">you can get your numerical direction and coordinates in the debug menu by pressing <a style="color: rgb(174, 103, 255)">F3</a></p>
+            <p class="small-text">when you throw the first one, make sure to get your location while looking at the eye of ender.</p>
+            <p class="small-text">in another position throw the second one and also record the throw's location.</p>
+            <p class="small-text">you can copy your location to the clipboard by pressing <a style="color: rgb(174, 103, 255)">F3 + C</a></p>
             <br>
         </div>
         <div id="inputs">
             <div class="purple-box border throw">
                 <h2>first throw:</h2>
                 <form>
-                    <p>coordinates: </p>
-                    <div id="input-coords-div">
-                        <p class="no-margin darker">x: <input id="x1" type="number"></p>
-                        <p class="no-margin darker">z: <input id="z1" type="number"></p>
-                    </div>
-                    <p>direction: <input id="angle1" type="number"></p>
+                    <div class="horizontal"><p>location: </p><input placeholder="/execute in minecraft:overworld run..." id="throw1" class="text-box" type="text"></div>
                     <br>
                 </form>
             </div>
             <div class="purple-box border throw">
                 <h2>second throw:</h2>
                 <form>
-                    <p>coordinates: </p>
-                    <div id="input-coords-div">
-                        <p class="no-margin darker">x: <input id="x2" type="number"></p>
-                        <p class="no-margin darker">z: <input id="z2" type="number"></p>
-                    </div>
-                    <p>direction: <input id="angle2" type="number"></p>
+                    <div class="horizontal"><p>location: </p><input placeholder="/execute in minecraft:overworld run..." id="throw2" class="text-box" type="text"></div>
                     <br>
                 </form>
             </div>
@@ -54,10 +44,14 @@
         <div class="purple-box ans-box border">
             <p>Stronghold is approximately at:</p>
             <div id="ans-coord-div">
-                <p>x: </p>
-                <p id="xans" class="coords"></p>
-                <p>y: </p>
-                <p id="zans" class="coords"></p>
+                <div class="horizontal">
+                    <p>x: </p>
+                    <p id="xans" class="coords"></p>
+                </div>
+                <div class="horizontal">
+                    <p>y: </p>
+                    <p id="zans" class="coords"></p>
+                </div>
             </div>
             <p id="error">error!</p>
         </div>
