@@ -4,20 +4,23 @@ var ansX = document.getElementById("xans")
 var ansZ = document.getElementById("zans")
 errorMessage.style.display = "none";
 
+// converte graus para radianos
 function deg2rad(degrees) {
   return degrees * (Math.PI / 180);
 }
 
+// obter parametro x da posição da stronghold
 function getStronghold_X(x1, z1, angle1, x2, z2, angle2) {
     const r1 = Math.tan(deg2rad(angle1));
     const r2 = Math.tan(deg2rad(angle2));
     
     const c1 = z1 - r1 * x1;
     const c2 = z2 - r2 * x2;
-
+    
     return (c2 - c1) / (r1 - r2);
 }
 
+// obter parametro z da posição da stronghold
 function getStronghold_Z(x, x1, z1, angle1) {
     const r = Math.tan(deg2rad(angle1));
     return r * (x - x1) + z1;
