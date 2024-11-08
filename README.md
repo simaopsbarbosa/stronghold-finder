@@ -14,7 +14,7 @@ A web tool to help you find the closest stronghold in Minecraft by using two thr
 2. Press `F3 + C` to copy your location and direction as a command.
 3. Repeat from a different location and copy the second command.
 4. Paste both commands into the input fields on the site.
-5. Click "Find Stronghold" to calculate the coordinates of the nearest stronghold.
+5. Click `"Find Stronghold"` to calculate the coordinates of the nearest stronghold.
 
 ## Contributions
 
