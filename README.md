@@ -2,6 +2,8 @@
 
 A web tool to help you find the closest stronghold in Minecraft by using two throws of the Eye of Ender.
 
+![chrome_2pqUGMWQGY](https://github.com/user-attachments/assets/1cce9a76-c875-40df-98bd-9d39111dfb68)
+
 ## Features
 
 - Input the coordinates and angles from two Eye of Ender throws.
