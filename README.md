@@ -1,27 +1,50 @@
-# <img src="favicon-32x32.png" alt="Eye of Ender" width="20"/> Stronghold Finder   <img src="favicon-32x32.png" alt="Eye of Ender" width="20"/>
+# React + TypeScript + Vite
 
-A web tool to help you find the closest stronghold in Minecraft by using two throws of the Eye of Ender.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-![chrome_2pqUGMWQGY](https://github.com/user-attachments/assets/1cce9a76-c875-40df-98bd-9d39111dfb68)
+Currently, two official plugins are available:
 
-## Features
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-- Input the coordinates and angles from two Eye of Ender throws.
-- Calculates the approximate location of the nearest stronghold.
-- User-friendly interface.
+## Expanding the ESLint configuration
 
-## How to Use
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-1. Throw an Eye of Ender in Minecraft and look in the direction it went.
-2. Press `F3 + C` to copy your location and direction as a command.
-3. Repeat from a different location and copy the second command.
-4. Paste both commands into the input fields on the site.
-5. Click `"Find Stronghold"` to calculate the coordinates of the nearest stronghold.
+- Configure the top-level `parserOptions` property like this:
 
-## Contributions
+```js
+export default tseslint.config({
+  languageOptions: {
+    // other options...
+    parserOptions: {
+      project: ['./tsconfig.node.json', './tsconfig.app.json'],
+      tsconfigRootDir: import.meta.dirname,
+    },
+  },
+})
+```
 
-Feel free to fork the repository and submit pull requests if you'd like to contribute.
+- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
+- Optionally add `...tseslint.configs.stylisticTypeChecked`
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
 
-## License
+```js
+// eslint.config.js
+import react from 'eslint-plugin-react'
 
-This project is licensed under the MIT License.
+export default tseslint.config({
+  // Set the react version
+  settings: { react: { version: '18.3' } },
+  plugins: {
+    // Add the react plugin
+    react,
+  },
+  rules: {
+    // other rules...
+    // Enable its recommended rules
+    ...react.configs.recommended.rules,
+    ...react.configs['jsx-runtime'].rules,
+  },
+})
+```
