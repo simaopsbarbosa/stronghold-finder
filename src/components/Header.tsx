@@ -4,7 +4,7 @@ function Header() {
       <h1 className="py-3 text-center text-6xl text-zinc-100">
         FIND YOUR STRONGHOLD
       </h1>
-      <p className="text-center text-neutral-400 text-xl leading-4">
+      <p className="text-center text-xl leading-4 text-neutral-400">
         you will need to throw two{" "}
         <a
           className="text-purple-500"
@@ -13,11 +13,11 @@ function Header() {
           EYES OF ENDER
         </a>
         . <br />
-        when you throw the first one, make sure to get your location while
-        looking at the eye of ender. <br />
+        when you throw the first one, get your location while looking directly
+        at the eye of ender. <br />
         in another position throw the second one and also record the throw's
-        location. <br />
-        you can copy your location to the clipboard by pressing{" "}
+        location and rotation. <br />
+        you can copy your location and rotation to the clipboard by pressing{" "}
         <a className="text-purple-500">F3 + C</a>.
       </p>
       <br />

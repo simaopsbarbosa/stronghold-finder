@@ -1,6 +1,7 @@
 import "./App.css";
 import brickBackground from "./assets/brick.png";
 import Header from "./components/Header";
+import Throw from "./components/Throw";
 
 function App() {
   return (
@@ -16,8 +17,12 @@ function App() {
           backgroundColor: "black",
         }}
       >
-        <div className="border-x border-neutral-700 m-auto min-h-screen max-w-4xl px-0 py-1 backdrop-blur-md backdrop-brightness-75">
+        <div className="m-auto min-h-screen max-w-4xl border-x border-neutral-700 px-0 py-1 backdrop-blur-md backdrop-brightness-75">
           <Header />
+          <div className="flex space-x-5 px-10">
+            <Throw description="FIRST THROW" />
+            <Throw description="SECOND THROW" />
+          </div>
         </div>
       </div>
     </>
