@@ -1,11 +1,11 @@
 import "./App.css";
 import brickBackground from "./assets/brick.png";
+import Header from "./components/Header";
 
 function App() {
   return (
     <>
       <div
-        className="Component-Bg"
         style={{
           backgroundImage: `url(${brickBackground})`,
           backgroundSize: "75px",
@@ -13,9 +13,12 @@ function App() {
           backgroundRepeat: "repeat",
           width: "100vw",
           height: "100vh",
+          backgroundColor: "black",
         }}
       >
-        <h1 className="text-black font-extrabold text-center pt-10">find your closest stronghold</h1>
+        <div className="border-x border-neutral-700 m-auto min-h-screen max-w-4xl px-0 py-1 backdrop-blur-md backdrop-brightness-75">
+          <Header />
+        </div>
       </div>
     </>
   );
