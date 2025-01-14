@@ -1,5 +1,6 @@
 import "./App.css";
 import brickBackground from "./assets/brick.png";
+import Button from "./components/Button";
 import Header from "./components/Header";
 import Throw from "./components/Throw";
 
@@ -23,6 +24,7 @@ function App() {
             <Throw description="FIRST THROW" />
             <Throw description="SECOND THROW" />
           </div>
+          <Button />
         </div>
       </div>
     </>
