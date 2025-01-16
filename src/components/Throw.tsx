@@ -5,7 +5,7 @@ function Throw({ description }: { description: string }) {
 
   return (
     <div className="w-full rounded-lg border border-neutral-700 bg-purple-600 bg-opacity-15 p-4">
-      <h1 className="pt-3 text-center text-4xl text-zinc-100">{description}</h1>
+      <h1 className="pt-3 font-semibold text-center text-3xl text-zinc-100">{description}</h1>
       <p className="pb-3 text-center text-xl text-neutral-400">
         paste copied command below:
       </p>

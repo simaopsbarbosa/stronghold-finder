@@ -1,10 +1,10 @@
 function Header() {
   return (
     <div className="m-10 rounded-lg border border-neutral-700 bg-neutral-900 bg-opacity-75 p-4">
-      <h1 className="py-3 text-center text-6xl text-zinc-100">
+      <h1 className="pt-3 pb-6 text-center font-semibold text-5xl text-zinc-100">
         FIND YOUR STRONGHOLD
       </h1>
-      <p className="text-center text-xl leading-4 text-neutral-400">
+      <p className="text-center text-xl leading-5 text-neutral-400">
         you will need to throw two{" "}
         <a
           className="text-purple-500"
