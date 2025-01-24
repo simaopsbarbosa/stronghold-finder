@@ -1,8 +1,4 @@
-import { useState } from "react";
-
-function Throw({ description }: { description: string }) {
-  const [command, setCommand] = useState("");
-
+function Throw({ description, command, setCommand }: { description: string, command: string, setCommand: (value: string) => void }) {
   return (
     <div className="w-full rounded-lg border border-neutral-700 bg-purple-600 bg-opacity-15 p-4">
       <h1 className="pt-3 font-semibold text-center text-3xl text-zinc-100">{description}</h1>
