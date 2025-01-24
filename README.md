@@ -1,8 +1,8 @@
-# <img src="favicon-32x32.png" alt="Eye of Ender" width="20"/> Stronghold Finder   <img src="favicon-32x32.png" alt="Eye of Ender" width="20"/>
+# <img src="public/favicon.png" alt="Eye of Ender" width="20"/> Stronghold Finder   <img src="public/favicon.png" alt="Eye of Ender" width="20"/>
 
 A web tool to help you find the closest stronghold in Minecraft by using two throws of the Eye of Ender.
 
-![chrome_2pqUGMWQGY](https://github.com/user-attachments/assets/1cce9a76-c875-40df-98bd-9d39111dfb68)
+![screenshot](https://github.com/user-attachments/assets/1cce9a76-c875-40df-98bd-9d39111dfb68)
 
 ## Features
 
